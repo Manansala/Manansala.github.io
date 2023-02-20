@@ -297,3 +297,6 @@
 
 
     option()
+    
+    
+# For the last section of the ePortfolio, I used an original database which was created in sql. To show my understanding of data bases and how they operate, I translated the information from that data base into a MongoDB database. Doing so not only displayed my understanding but also showed my ability to support an organizational decision such as transferring an existing database into a different one. This is an example of a project that is a possibility in a professional setting. The effectiveness of the computing techniques and skills is also displayed as the new MongoDB is fully fleshed out and functioning.     
