@@ -12,7 +12,7 @@
   secondaryDictionary = dict()
 
   # request input from user
-  initialInput = int(input('How many student records do you want to input? '))
+    initialInput = int(input('How many student records do you want to input? '))
 
   #prompt requesting information from user to further program
   for i in range(0, initialInput):
