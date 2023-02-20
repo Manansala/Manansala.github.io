@@ -2,7 +2,7 @@
 
 
     
-## With the original artifact being a template/diagram for how this program was wanted to be run, I created the code to include all of the neccessary features. I employed strategies for building collaborative environments by notaing the purpose of each section of code. This allows other team members to pick up from any of the coding and edit as they see fit to better the project. The design and notation portrays professional quality written and visual commnication which helps promote team work. This code design is an example of complete and efficient computing solutions for the task at hand. This code promotes best practices and uses proper algorithmic priniciples. The techniques within this project displays efficient techniques, skills and tools. When running this code, all of the intended uses of the program execute completely and without error. A security mindset is displayd as this program only functions with the proper student information. Without proper information, this program ceases to be effective which helps keep private information safe.
+## With the software design and engineering original artifact being a template/diagram for how this program was wanted to be run, I created the code to include all of the neccessary features. I employed strategies for building collaborative environments by notaing the purpose of each section of code. This allows other team members to pick up from any of the coding and edit as they see fit to better the project. The design and notation portrays professional quality written and visual commnication which helps promote team work. This code design is an example of complete and efficient computing solutions for the task at hand. This code promotes best practices and uses proper algorithmic priniciples. The techniques within this project displays efficient techniques, skills and tools. When running this code, all of the intended uses of the program execute completely and without error. A security mindset is displayd as this program only functions with the proper student information. Without proper information, this program ceases to be effective which helps keep private information safe.
 
       
 #("-Student/Course Record Maintenance-")
@@ -216,83 +216,84 @@
 
       options()
       
-      
-#print("--Travel Helper--")
-#program is used to help user organize information on potential vacations
-#the point of this is to give the user data visualization to help decide where they really want to vacation most
+# With the Algorithms and Data Structure original artifact, the idea behind it was a feature list that the client wanted. To show my understanding of algorithms and data structure, I created a working program with the desired feature set. The code invites collaborators as the notation helps guide through what all of the coding blocks do so that anyone could jump in and edit. The communication for both the user prompts and the notation for coders is clear, professional, and precise to meet that course outcome. The computing solutions are up to a professional standard and run efficiently. The technique and skills shown are up to a professional level as there is no unecessary code.
 
-#establish dictionaries that will be utilized
-vacationData = {}
-vacationData2 = {}
-vacationData3 = {}
+    #print("--Travel Helper--")
+        #program is used to help user organize information on potential vacations
+        #the point of this is to give the user data visualization to help decide where they really want to vacation most
 
-#request input from user
-userInput = int(input('How many places are you interested in visiting for a Vacation?! (You may include places you have already visited)'))
+    #establish dictionaries that will be utilized
+        vacationData = {}
+        vacationData2 = {}
+        vacationData3 = {}
 
-# adds user input as data that will be used to sort
-for i in range(0,userInput):
-    locations = input(" Please enter the City and Country of location: ")
-    type = input(" Please enter the Type of vacation? (Tourist or Cruise): ")
-    iLevel = input("From a scale of 1-10, what is your interest level in this location? (Enter 1-10):")
-    recur = input("Have you vacationed here previously?")
-    vacationData[locations] = iLevel
-    vacationData2[locations] = type
-    vacationData3[locations] = recur
+    #request input from user
+        userInput = int(input('How many places are you interested in visiting for a Vacation?! (You may include places you have already visited)'))
 
-# define a function for asking how user wants to organize sorting function
-def option():
-    choice = int(input('Enter the sort function you would like to use: \n \
-    1: Sort vacation by interest level \n \
-    2: Sort vacation by vacation type \n \
-    3: Sort vacation by whether or not this is a recurring vacation : \n \
-    4: Exit\n \
-    Option: '))
+    #adds user input as data that will be used to sort
+       for i in range(0,userInput):
+            locations = input(" Please enter the City and Country of location: ")
+            type = input(" Please enter the Type of vacation? (Tourist or Cruise): ")
+            iLevel = input("From a scale of 1-10, what is your interest level in this location? (Enter 1-10):")
+            recur = input("Have you vacationed here previously?")
+            vacationData[locations] = iLevel
+            vacationData2[locations] = type
+            vacationData3[locations] = recur
 
-    if choice == 1:
-        # sort vacation options by interest level of locations
-        sort_vacationData= sorted(vacationData.items(), reverse=True)
-        for i in sort_vacationData:
-            print(i[1],i[0])
-        # gives user option to sort using a different option
-        print('Would you like to sort with a different category?? "y" or "n": ')
-        inp = input()
-        if inp == 'y':
-            option()
+    #define a function for asking how user wants to organize sorting function
+        def option():
+            choice = int(input('Enter the sort function you would like to use: \n \
+            1: Sort vacation by interest level \n \
+            2: Sort vacation by vacation type \n \
+            3: Sort vacation by whether or not this is a recurring vacation : \n \
+            4: Exit\n \
+            Option: '))
 
-        # exit call
-        exit()
+        if choice == 1:
+            #sort vacation options by interest level of locations
+                sort_vacationData= sorted(vacationData.items(), reverse=True)
+                for i in sort_vacationData:
+                    print(i[1],i[0])
+            #gives user option to sort using a different option
+                print('Would you like to sort with a different category?? "y" or "n": ')
+                inp = input()
+                if inp == 'y':
+                    option()
 
-    elif choice == 2:
-        # sort vacation options by vacation type ( tourist type attractions or cruise )
-        sort_vacationData2 = sorted(vacationData2.items(), key=lambda x: x[1], reverse=True)
-        for i in sort_vacationData2:
-            print(i[1], i[0])
-        # gives user option to sort using a different option
-        print('Would you like to sort with a different category? "y" or "n": ')
-        inp = input()
-        if inp == 'y':
-            option()
+            #exit call
+                exit()
 
-        # exit function call
-        exit()
+        elif choice == 2:
+            #sort vacation options by vacation type ( tourist type attractions or cruise )
+            sort_vacationData2 = sorted(vacationData2.items(), key=lambda x: x[1], reverse=True)
+            for i in sort_vacationData2:
+                print(i[1], i[0])
+            #gives user option to sort using a different option
+            print('Would you like to sort with a different category? "y" or "n": ')
+            inp = input()
+            if inp == 'y':
+                option()
 
-    elif choice == 3:
-        # sort vacation options by whether or not location has been visited before
-        sort_vacationData3 = sorted(vacationData3.items(), key=lambda x: x[1], reverse=True)
-        for i in sort_vacationData3:
-            print(i[1], i[0])
-        # gives user option to sort using a different option
-        print('Would you like to sort with a different category? "y" or "n": ')
-        inp = input()
-        if inp == 'y':
-            option()
+            #exit function call
+            exit()
 
-        # exit function call
-        exit()
-    #This is for if the user decides not to sort using a different option
-    else:
-        print('Vacation helper has closed')
-        exit()
+        elif choice == 3:
+            #sort vacation options by whether or not location has been visited before
+            sort_vacationData3 = sorted(vacationData3.items(), key=lambda x: x[1], reverse=True)
+            for i in sort_vacationData3:
+                print(i[1], i[0])
+            #gives user option to sort using a different option
+            print('Would you like to sort with a different category? "y" or "n": ')
+            inp = input()
+            if inp == 'y':
+                option()
+
+            #exit function call
+            exit()
+        #This is for if the user decides not to sort using a different option
+        else:
+            print('Vacation helper has closed')
+            exit()
 
 
-option()
+    option()
