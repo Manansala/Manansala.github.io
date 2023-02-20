@@ -15,7 +15,7 @@
     initialInput = int(input('How many student records do you want to input? '))
 
   #prompt requesting information from user to further program
-  for i in range(0, initialInput):
+    for i in range(0, initialInput):
           fN, lN = input("Enter the complete name (First and last name) of student (Case sensitive): ").split()
           studentID = input("Enter Student ID Number: ")
           studentDOB = input('Enter date of birth (MM/DD/YYYY): ')
@@ -24,7 +24,7 @@
 
 
   #define a function for sorting names based on last name from z-a
-  def sort():
+    def sort():
       ls = list()
       # fetch key and value using / items() method
       for uName, details in primaryDictionary.items():
@@ -33,7 +33,7 @@
           # add tuple to list
           ls.append(tup)
 
-      #sort list
+   #sort list
       ls = sorted(ls)
       for i in ls:
           # print names
@@ -56,7 +56,7 @@
 
 
   #define a function for searching student id number by using last name
-  def searchdetail(lname):
+    def searchdetail(lname):
       ls = list()
 
       for sname, details in primaryDictionary.items():
@@ -69,7 +69,7 @@
       return
 
   #define a function for asking the user for input information
-  def option():
+    def option():
       choice = int(input('Enter the operation detail: \n \
       1: Sort students using last name \n \
       2: Look up date of birth using last name \n \
@@ -81,7 +81,7 @@
 
 
       if choice == 1:
-          # function sort call
+          #function sort call
           sort()
           # give user option to perform a different function
           print('Do you want to perform a different function? "y" or "n": ')
@@ -89,13 +89,13 @@
           if inp == 'y':
               option()
 
-          # exit function call
+          #exit function call
           exit()
 
       elif choice == 2:
           last = input('Enter last name of student: ')
           dob(last)
-          # give user option to perform a different function
+          #give user option to perform a different function
           print('Do you want to perform a different function? "y" or "n": ')
           inp = input()
           if inp == 'y':
@@ -106,17 +106,17 @@
       elif choice == 3:
           last = input('Enter last name of student: ')
           searchdetail(last)
-          # give user option to perform a different function
+          #give user option to perform a different function
           print('Do you want to perform a different function? "y" or "n": ')
           inp = input()
           if inp == 'y':
               option()
 
       elif choice == 4:
-          # request input from user
+          #request input from user
           secondInput = int(input('How many course records do you want to maintain? '))
 
-           # add student information to the dictionary
+           #add student information to the dictionary
           for i in range(0, secondInput):
               cId1, cId2 = input("Enter course ID (ex: CS 499) (Case sensitive): ").split()
               courseName = input("Enter course name: ")
@@ -127,16 +127,16 @@
 
 
   #sort function
-  def sort2():
+    def sort2():
       ls = list()
-      # fetch key and value using / items() method
+      #fetch key and value using / items() method
       for sName, details in secondaryDictionary.items():
-          # store both names as a tuple
+          #store both names as a tuple
           tup = (sName[1], sName[0])
-          # add tuple to list
+          #add tuple to list
           ls.append(tup)
 
-      # sort list
+   #sort list
       ls = sorted(ls)
       for i in ls:
           # print names
@@ -144,7 +144,7 @@
       return
 
   #course ID search function
-  def cIdLookup(cids):
+      def cIdLookup(cids):
       ls = list()
 
       for coName, details in secondaryDictionary.items():
@@ -157,35 +157,35 @@
       return
 
   #define a function for searching student id number by using last name
-  def searchdetail2(id):
-      ls = list()
+      def searchdetail2(id):
+        ls = list()
 
-      for cname, details in secondaryDictionary.items():
+        for cname, details in secondaryDictionary.items():
           tup = (cname, details)
           ls.append(tup)
 
-      for i in ls:
+        for i in ls:
           if ([0],i[0]) == id:
               print(i[1][0])
-      return
+        return
   #Second set of course options
-  def options():
-      choice2 = int(input('Enter the operation detail: \n \
-      1: Sort courses using course ID \n \
-      2: Look up course name using course ID \n \
-      3: Look up course credit hours using course ID: \n \
-      4: Exit\n \
-      Option: '))
+      def options():
+        choice2 = int(input('Enter the operation detail: \n \
+        1: Sort courses using course ID \n \
+        2: Look up course name using course ID \n \
+        3: Look up course credit hours using course ID: \n \
+        4: Exit\n \
+        Option: '))
 
       if choice2 == 1:
-      # function call asking to further or end program
+      #function call asking to further or end program
           sort2()
           print('Want to perform some other operation??? "y" or "n": ')
           inp = input()
           if inp == 'y':
               options()
 
-          # exit function call
+          #exit function call
           exit()
 
       elif choice2 == 2:
