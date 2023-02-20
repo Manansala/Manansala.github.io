@@ -11,7 +11,7 @@
   primaryDictionary = dict()
   secondaryDictionary = dict()
 
-  # request input from user
+  #request input from user
     initialInput = int(input('How many student records do you want to input? '))
 
   #prompt requesting information from user to further program
@@ -26,17 +26,17 @@
   #define a function for sorting names based on last name from z-a
         def sort():
         ls = list()
-        # fetch key and value using / items() method
+        #fetch key and value using / items() method
         for uName, details in primaryDictionary.items():
-             # store both names as a tuple
+             #store both names as a tuple
             tup = (uName[0], uName[1])
-            # add tuple to list
+            #add tuple to list
             ls.append(tup)
 
    #sort list
       ls = sorted(ls)
       for i in ls:
-          # print names
+          #print names
           print(i[1], i[0])
       return
 
@@ -83,7 +83,7 @@
       if choice == 1:
           #function sort call
           sort()
-          # give user option to perform a different function
+          #give user option to perform a different function
           print('Do you want to perform a different function? "y" or "n": ')
           inp = input()
           if inp == 'y':
@@ -139,7 +139,7 @@
    #sort list
       ls = sorted(ls)
       for i in ls:
-          # print names
+          #print names
           print(i[1], i[0])
       return
 
@@ -212,7 +212,7 @@
 
 
 
-  options()
+      options()
 
       options()
       
