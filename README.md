@@ -1,2 +1,2 @@
-# Manansala.github.io - test
+# Manansala.github.io
 
