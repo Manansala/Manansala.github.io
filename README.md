@@ -24,14 +24,14 @@
 
 
   #define a function for sorting names based on last name from z-a
-    def sort():
-      ls = list()
-      # fetch key and value using / items() method
-      for uName, details in primaryDictionary.items():
-          # store both names as a tuple
-          tup = (uName[0], uName[1])
-          # add tuple to list
-          ls.append(tup)
+        def sort():
+        ls = list()
+        # fetch key and value using / items() method
+        for uName, details in primaryDictionary.items():
+             # store both names as a tuple
+            tup = (uName[0], uName[1])
+            # add tuple to list
+            ls.append(tup)
 
    #sort list
       ls = sorted(ls)
