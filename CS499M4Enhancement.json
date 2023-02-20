@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "6396b3c57784786c9778e329"
+  },
+  "Customer ID": "01",
+  "FirstName": "John",
+  "LastName": "Doe",
+  "Street": "123 Night Ln",
+  "City": "Los Angeles",
+  "State": "CA",
+  "ZipCode": "92058",
+  "Phone": "3231111111"
+},{
+  "_id": {
+    "$oid": "6396b9647784786c9778e32a"
+  },
+  "Customer ID": "02",
+  "FirstName": "Jane",
+  "LastName": "Smith",
+  "Street": "456 Vicky Ave",
+  "City": "Canoga Park",
+  "State": "CA",
+  "ZipCode": "91303",
+  "Phone": "8182222222"
+},{
+  "_id": {
+    "$oid": "6396b9f07784786c9778e32b"
+  },
+  "Customer ID": "03",
+  "FirstName": "Mildred",
+  "LastName": "Waters",
+  "Street": "418 Ann Marie Dr",
+  "City": "Southaven",
+  "State": "MS",
+  "ZipCode": "38671",
+  "Phone": "6623333333"
+},{
+  "_id": {
+    "$oid": "6396ba8c7784786c9778e32c"
+  },
+  "Customer ID": "04",
+  "FirstName": "James",
+  "LastName": "Fant",
+  "Street": "676 Stonegate Blvd",
+  "City": "Cordova",
+  "State": "Tennessee",
+  "ZipCode": "38016",
+  "Phone": "9014444444"
+},{
+  "_id": {
+    "$oid": "6396bb8f7784786c9778e32d"
+  },
+  "Customer ID": "05",
+  "FirstName": "Max",
+  "LastName": "Reder",
+  "Street": "25 N Cedar Lake Dr W",
+  "City": "Columbia",
+  "State": "MO",
+  "ZipCode": "65203",
+  "Phone": "5735555555"
+}]
